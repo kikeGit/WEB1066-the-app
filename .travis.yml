@@ -10,13 +10,16 @@
  # - find vagrant/provision -name "*.yml" -exec ansible-lint -x ANSIBLE008,ANSIBLE0011,ANSIBLE0012,ANSIBLE0013  {} +
 
 
-lenguage: java
-services:
-  - docker
-jdk: 
-  - oraclejdk8
+language: java
+jdk: openjdk8
 
-before_install:
-  - docker build -t the-app .
-  
-script: mvn clean verify
+
+
+install:
+  - "./gradlew clean jar"
+
+
+
+script:
+  - "./gradelew clean jar"
+  - echo 'testing comming soon'
