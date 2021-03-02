@@ -10,7 +10,9 @@
  # - find vagrant/provision -name "*.yml" -exec ansible-lint -x ANSIBLE008,ANSIBLE0011,ANSIBLE0012,ANSIBLE0013  {} +
 
 sudo: required
-jdk: oraclejdk8
+jdk: 
+  - oraclejdk9
+  - oraclejdk8
 dist: trusty
 
 install:
